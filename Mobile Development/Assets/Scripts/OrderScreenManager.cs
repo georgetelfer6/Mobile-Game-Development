@@ -17,18 +17,15 @@ public class OrderScreenManager : MonoBehaviour
     {
         gameObject.SetActive(false);
         UnityEngine.SceneManagement.SceneManager.LoadScene("MergeScreen");
-        Debug.Log("clicked");
     }
     public void OpenShop()
     {
         orderCanvas.SetActive(false);
         shopCanvas.SetActive(true);
-        Debug.Log("Shop Opened");
     }
     public void CloseShop()
     {
         shopCanvas.SetActive(false);
         orderCanvas.SetActive(true);
-        Debug.Log("Shop Closed");
     }
 }

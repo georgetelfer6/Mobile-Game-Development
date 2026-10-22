@@ -1,0 +1,14 @@
+notes
+
+canvas 1
+order screen with everything on it
+cash number separate
+canvas 2 has shop screen that way order screen doesn't have to be unloaded just disabled
+flip flop for turning order screen on and off?
+
+same goes for game screen, timer is paused and find a way to pause movement of the merge grid
+
+turn off ontriggerstayevents in proj settings
+turn off debug.log in settings
+
+doing game in ui rather than in 2d environment because no phsyics, more efficient? makes more sense for a mobile game. makes easier for animations and controls. 2d environment with physics for merge game would be complicated and confusing probably
