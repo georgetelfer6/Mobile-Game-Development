@@ -1786,8 +1786,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba4d265f614eb9840a78f5ac6eb36c99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OrderScreenManager
-  orderCanvas: {fileID: 0}
-  shopCanvas: {fileID: 0}
+  orderCanvas: {fileID: 1644022624}
+  shopCanvas: {fileID: 4612058}
 --- !u!114 &1702654866
 MonoBehaviour:
   m_ObjectHideFlags: 0
