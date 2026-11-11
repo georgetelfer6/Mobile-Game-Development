@@ -1,15 +1,20 @@
-using UnityEngine;
-using TMPro;
-using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using TMPro;
+using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class OrderSystem : MonoBehaviour
 {
     [System.Serializable]
-    public class RequiredIngredients // A list to show what ingredients are required for each pastry, to be used in the merge & order completion system
+    public class PastryList // List of variables that are important in identiifying each pastry type
     {
+        public string itemName;
+        public int itemID;
+        public Sprite itemImage;
         public bool Flour;
         public bool Yeast;
         public bool Egg;
@@ -21,18 +26,10 @@ public class OrderSystem : MonoBehaviour
         public bool Apple;
     }
 
-    [System.Serializable]
-    public class PastryList // List of variables that are important in identiifying each pastry type
-    {
-        public string itemName;
-        public int itemID;
-        public Sprite itemImage;
-        public RequiredIngredients ingredients;
-    }
-
     public PastryList[] orderData;
     public int orderNum;
     bool settingOrder = false;
+    public Image orderSprite;
 
     void Start()
     {
@@ -60,6 +57,18 @@ public class OrderSystem : MonoBehaviour
             if (item.itemID == orderNum)
             {
                 Debug.Log($"item id =" + orderNum);
+                GameData.orderImage = item.itemImage;
+                GameData.orderName = item.itemName;
+                GameData.needsFlour = item.Flour;
+                GameData.needsYeast = item.Yeast;
+                GameData.needsEgg = item.Egg;
+                GameData.needsMilk = item.Milk;
+                GameData.needsButter = item.Butter;
+                GameData.needsSugar = item.Sugar;
+                GameData.needsChocolate = item.Chocolate;
+                GameData.needsApple = item.Apple;
+                GameData.needsStrawberry = item.Strawberry;
+                orderSprite.sprite = GameData.orderImage;
             }
         }
     }
