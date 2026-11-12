@@ -5,6 +5,7 @@ using System.Linq;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 public class OrderSystem : MonoBehaviour
@@ -32,15 +33,18 @@ public class OrderSystem : MonoBehaviour
     public int orderNum;
     bool settingOrder = false;
     public Image orderSprite;
+    public TMP_Text coins;
+    private int coinsAmount;
 
     void Start()
     {
         orderNum = Random.Range(0, orderData.Length); // Gets a random int between 0 and the array length to create a randomised order
         settingOrder = true;
         Debug.Log($"setting order");
+        coinsAmount = GameData.playerMoney;
+        coins.text = coinsAmount.ToString(); //bugs out when u get bread rather than bagel
     }
 
-    
     void Update()
     {
         if (settingOrder == true)

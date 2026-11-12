@@ -324,6 +324,82 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &407467492
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 407467494}
+  - component: {fileID: 407467493}
+  m_Layer: 0
+  m_Name: OrderSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &407467493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407467492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d590b4fcf283c43963cd57c28edeb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OrderSystem
+  orderData:
+  - itemName: Bread
+    itemID: 0
+    itemImage: {fileID: -300069641319071704, guid: 74d3595cb03eb82469fbe8530bc5f93a, type: 3}
+    itemPrice: 1000
+    totalIngredientNumber: 1
+    Flour: 1
+    Yeast: 1
+    Egg: 1
+    Milk: 1
+    Butter: 1
+    Sugar: 1
+    Chocolate: 1
+    Strawberry: 1
+    Apple: 1
+  - itemName: Bagel
+    itemID: 1
+    itemImage: {fileID: -1231356082813145520, guid: 8325e426ce0e7b74a929c65abf8e36d7, type: 3}
+    itemPrice: 2000
+    totalIngredientNumber: 2
+    Flour: 1
+    Yeast: 1
+    Egg: 1
+    Milk: 1
+    Butter: 1
+    Sugar: 1
+    Chocolate: 1
+    Strawberry: 1
+    Apple: 1
+  orderNum: 0
+  orderSprite: {fileID: 1086027398}
+  coins: {fileID: 1299689923}
+--- !u!4 &407467494
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407467492}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 666.66394, y: 1706.142, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &546946739
 GameObject:
   m_ObjectHideFlags: 0
@@ -989,7 +1065,6 @@ GameObject:
   - component: {fileID: 1086027397}
   - component: {fileID: 1086027399}
   - component: {fileID: 1086027398}
-  - component: {fileID: 1086027400}
   m_Layer: 5
   m_Name: OrderImage
   m_TagString: Untagged
@@ -1054,49 +1129,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1086027396}
   m_CullTransparentMesh: 1
---- !u!114 &1086027400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1086027396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6d590b4fcf283c43963cd57c28edeb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::OrderSystem
-  orderData:
-  - itemName: 
-    itemID: 0
-    itemImage: {fileID: -3181534952648006660, guid: 28d69481c7f984643a8f3223d090d4b8, type: 3}
-    itemPrice: 123
-    totalIngredientNumber: 3
-    Flour: 1
-    Yeast: 1
-    Egg: 1
-    Milk: 0
-    Butter: 0
-    Sugar: 0
-    Chocolate: 0
-    Strawberry: 0
-    Apple: 0
-  - itemName: 
-    itemID: 1
-    itemImage: {fileID: -3188074485087870156, guid: 9e5eac7587900e446b721430aad996e8, type: 3}
-    itemPrice: 12222
-    totalIngredientNumber: 3
-    Flour: 1
-    Yeast: 1
-    Egg: 1
-    Milk: 0
-    Butter: 0
-    Sugar: 0
-    Chocolate: 0
-    Strawberry: 0
-    Apple: 0
-  orderNum: 0
-  orderSprite: {fileID: 1086027398}
 --- !u!1 &1147662954
 GameObject:
   m_ObjectHideFlags: 0
@@ -2433,3 +2465,4 @@ SceneRoots:
   - {fileID: 4612062}
   - {fileID: 1644022628}
   - {fileID: 1063055125}
+  - {fileID: 407467494}

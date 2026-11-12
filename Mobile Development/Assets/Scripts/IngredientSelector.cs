@@ -14,6 +14,7 @@ public class IngredientSelector : MonoBehaviour
     }
     void Update()
     {
+        Debug.Log(GameData.selectedIngredients);
         if (GameData.selectedIngredients == GameData.ingredientNumber)
         {
             BakeButton();
@@ -35,8 +36,10 @@ public class IngredientSelector : MonoBehaviour
             if (GameData.needsFlour == true)
             {
                 GameData.selectedIngredients++;
+                gameObject.SetActive(false);
             }
             Debug.Log($"selected");
+            Handheld.Vibrate();
         }
     }
     public void SetYeast()
@@ -55,8 +58,10 @@ public class IngredientSelector : MonoBehaviour
             if (GameData.needsYeast == true)
             {
                 GameData.selectedIngredients++;
+                gameObject.SetActive(false);
             }
             Debug.Log($"selected");
+            Handheld.Vibrate();
         }
     }
     public void SetEgg()
@@ -75,11 +80,13 @@ public class IngredientSelector : MonoBehaviour
             if (GameData.needsEgg == true)
             {
                 GameData.selectedIngredients++;
+                gameObject.SetActive(false);
             }
             Debug.Log($"selected");
+            Handheld.Vibrate();
         }
     }
-    public void BakeButton()
+    public void BakeButton() //need to set it to be disabled if u continue adding ingredients  or un add ingredients
     {
         bakeButton.SetActive(true);
     }

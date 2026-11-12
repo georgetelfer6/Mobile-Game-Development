@@ -17,10 +17,10 @@ public class WinLoseManager : MonoBehaviour
     {
         GameData.gameWon = false;
         GameData.playerMoney = GameData.playerMoney + GameData.orderPrice;
-        GameData.orderPrice = 0;
     }
     public void LoadOrderScreen()
     {
+        Handheld.Vibrate();
         UnityEngine.SceneManagement.SceneManager.LoadScene("OrderScreen");
     }
 }
