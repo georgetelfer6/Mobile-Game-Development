@@ -8,6 +8,7 @@ public class MergeScreenManager : MonoBehaviour
     void Start()
     {
         mergeCanvas.SetActive(true);
+        Handheld.Vibrate();
         pauseCanvas.SetActive(false);
     }
     void Update()
@@ -17,11 +18,13 @@ public class MergeScreenManager : MonoBehaviour
     public void PauseClicked()
     {
         mergeCanvas.SetActive(false);
+        Handheld.Vibrate();
         pauseCanvas.SetActive(true);
     }
     public void UnpauseClicked()
     {
         pauseCanvas.SetActive(false);
+        Handheld.Vibrate();
         mergeCanvas.SetActive(true);
     }
 }
