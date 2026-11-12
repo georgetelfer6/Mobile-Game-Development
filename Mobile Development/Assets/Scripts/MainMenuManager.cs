@@ -13,6 +13,7 @@ public class MainMenuManager : MonoBehaviour
     public void StartClicked()
     {
         gameObject.SetActive(false);
+        Handheld.Vibrate();
         UnityEngine.SceneManagement.SceneManager.LoadScene("OrderScreen");
 
     }
