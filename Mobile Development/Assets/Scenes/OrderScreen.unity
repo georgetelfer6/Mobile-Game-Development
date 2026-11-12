@@ -1070,6 +1070,7 @@ MonoBehaviour:
   - itemName: 
     itemID: 0
     itemImage: {fileID: -3181534952648006660, guid: 28d69481c7f984643a8f3223d090d4b8, type: 3}
+    itemPrice: 123
     totalIngredientNumber: 3
     Flour: 1
     Yeast: 1
@@ -1083,6 +1084,7 @@ MonoBehaviour:
   - itemName: 
     itemID: 1
     itemImage: {fileID: -3188074485087870156, guid: 9e5eac7587900e446b721430aad996e8, type: 3}
+    itemPrice: 12222
     totalIngredientNumber: 3
     Flour: 1
     Yeast: 1

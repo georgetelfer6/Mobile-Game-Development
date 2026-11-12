@@ -4,8 +4,11 @@ using UnityEngine.UI;
 public class GameData : MonoBehaviour
 {
     [Header("Order Variables")]
+    public static int playerMoney = 0;
+    public static bool gameWon = false;
     public static Sprite orderImage;
     public static string orderName;
+    public static int orderPrice = 0;
     public static int ingredientNumber;
     public static int selectedIngredients;
     public static bool needsFlour;

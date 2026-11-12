@@ -1,8 +1,12 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class IngredientSelector : MonoBehaviour
 {
     public bool flipFlop;
+    public GameObject bakeButton;
+    public GameObject mergeCanvas;
+    public GameObject winCanvas;
 
     void Start()
     {
@@ -12,10 +16,10 @@ public class IngredientSelector : MonoBehaviour
     {
         if (GameData.selectedIngredients == GameData.ingredientNumber)
         {
-            Debug.Log($"ababa");
+            BakeButton();
         }
     }
-    public void SetFlour()
+    public void SetFlour() // in the future seperat the set ingredients script from the bake button & win script
     {
         flipFlop = !flipFlop;
         if (flipFlop == false)
@@ -74,5 +78,15 @@ public class IngredientSelector : MonoBehaviour
             }
             Debug.Log($"selected");
         }
+    }
+    public void BakeButton()
+    {
+        bakeButton.SetActive(true);
+    }
+    public void LoadWin()
+    {
+        winCanvas.SetActive(true);
+        mergeCanvas.SetActive(false);
+        GameData.gameWon = true;
     }
 }

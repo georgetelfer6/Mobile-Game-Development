@@ -15,6 +15,7 @@ public class OrderSystem : MonoBehaviour
         public string itemName;
         public int itemID;
         public Sprite itemImage;
+        public int itemPrice;
         public int totalIngredientNumber;
         public bool Flour;
         public bool Yeast;
@@ -61,6 +62,7 @@ public class OrderSystem : MonoBehaviour
                 GameData.orderImage = item.itemImage;
                 GameData.orderName = item.itemName;
                 GameData.ingredientNumber = item.totalIngredientNumber;
+                GameData.orderPrice = item.itemPrice;
                 GameData.needsFlour = item.Flour;
                 GameData.needsYeast = item.Yeast;
                 GameData.needsEgg = item.Egg;
